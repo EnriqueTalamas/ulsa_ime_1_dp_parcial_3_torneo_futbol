@@ -14,6 +14,7 @@
 
 #include "utilerias.h"
 #include "torneo.h"
+
 void mostrarMenu()
      {
     std::cout << "1.-Registrar equipo\n";
