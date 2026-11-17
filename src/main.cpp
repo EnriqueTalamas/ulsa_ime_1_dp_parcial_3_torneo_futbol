@@ -18,10 +18,13 @@ void mostrarMenu()
      {
     std::cout << "1.-Registrar equipo\n";
     std::cout << "2.-Mostrar equipos\n";
-    std::cout << "3.- Mostrar resultados\n";
-    std::cout << "4.-Mostrar tabla de posiciones\n";
-    std::cout << "5.-Materias Reprobadas por Alumno\n";
-    std::cout << "6.-Salir\n";
+    std::cout << "3.-Simular torneo\n";
+    std::cout << "4.-Mostrar resultados\n";
+    std::cout << "5.-Mostrar tabla de posiciones\n";
+    std::cout << "6.-Mostrar campeon\n";
+    std::cout << "7.-Consultar equipo\n";
+    std::cout << "8.-Mostrar matriz de enfrentamientos\n";
+    std::cout << "9.-Salir\n";
 }
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
