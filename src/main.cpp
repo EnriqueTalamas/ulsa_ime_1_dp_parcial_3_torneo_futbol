@@ -14,7 +14,15 @@
 
 #include "utilerias.h"
 #include "torneo.h"
-
+void mostrarMenu()
+     {
+    std::cout << "1.-Registrar equipo\n";
+    std::cout << "2.-Mostrar equipos\n";
+    std::cout << "3.- Mostrar resultados\n";
+    std::cout << "4.-Mostrar tabla de posiciones\n";
+    std::cout << "5.-Materias Reprobadas por Alumno\n";
+    std::cout << "6.-Salir\n";
+}
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
 int main() {
