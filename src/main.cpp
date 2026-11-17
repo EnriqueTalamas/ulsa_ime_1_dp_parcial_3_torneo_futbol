@@ -29,12 +29,16 @@ void mostrarMenu()
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
 int main() {
+int opcion = opcion > 0 && opcion <= 9;
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 std::cout<< "TORNEO DE FUTBOL" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
-
+mostrarMenu();
+while (true){
+        int opcion = leerEntero("Selecciona una opcion:"); 
+}
     // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
     //
     // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
