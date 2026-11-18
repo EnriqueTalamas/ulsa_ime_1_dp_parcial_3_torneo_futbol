@@ -15,9 +15,8 @@
 #include "utilerias.h"
 #include "torneo.h"
 
-
 void mostrarMenu()
-     {
+{
     std::cout << "1.-Registrar equipos\n";
     std::cout << "2.-Mostrar equipos\n";
     std::cout << "3.-Simular torneo\n";
@@ -30,52 +29,54 @@ void mostrarMenu()
 }
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
-int main() {
+int main()
+{
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
-std::cout<< "TORNEO DE FUTBOL" << std::endl;
+    std::cout << "TORNEO DE FUTBOL" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
-while (true){
-    mostrarMenu();
-
-        int opcion = leerEntero("Selecciona una opcion:"); 
-        std::cout << "Valor leido: " << opcion << std::endl;
-        if(opcion < 0 || opcion > 9) {
-    std::cout << "Numero no valido\n"; 
-}
-  switch(opcion){
-            case 1:
-       {
-  std::cout << "\nRegistrar equipos\n";
-   for (int i = 0; i < 6; i++)
+    while (true)
     {
-  std::cout << "Nombre del equipo " << i + 1 << ": ";
-  std::getline(std::cin, r[i].nombre);
+        mostrarMenu();
+
+        int opcion = leerEntero("Selecciona una opcion:");
+        std::cout << "Valor leido: " << opcion << std::endl;
+        if (opcion < 0 || opcion > 9)
+        {
+            std::cout << "Numero no valido\n";
+        }
+        switch (opcion)
+        {
+        case 1:
+        {
+            std::cout << "\nRegistrar equipos\n";
+            for (int i = 0; i < 6; i++)
+            {
+                std::cout << "Nombre del equipo " << i + 1 << ": ";
+                std::getline(std::cin, r[i].nombre);
+            }
+        }
+        break;
+
+            // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
+            //
+            // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
+            // Paso 2: intentar simular sin los 6 equipos (rechazo).
+            // Paso 3: registrar 6 equipos. Durante el registro, teclear un nombre
+            //         repetido con otras mayusculas o minusculas, uno de menos de
+            //         3 caracteres, uno de mas de 15 y uno con acento o enie
+            //         (rechazos).
+            // Paso 4: intentar registrar un equipo mas (rechazo por lista llena).
+            // Paso 5: simular en modo de prueba.
+            // Paso 6: intentar simular de nuevo (rechazo).
+            // Paso 7: mostrar equipos, resultados, tabla y matriz.
+            // Paso 8: mostrar al campeon y elegirlo entre los empatados.
+            // Paso 9: consultar un equipo existente y uno inexistente (rechazo).
+            // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
+            // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
+            //          resultados, tabla y campeon.
+        }
     }
-}
-            break;
-    
-
-    // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
-    //
-    // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
-    // Paso 2: intentar simular sin los 6 equipos (rechazo).
-    // Paso 3: registrar 6 equipos. Durante el registro, teclear un nombre
-    //         repetido con otras mayusculas o minusculas, uno de menos de
-    //         3 caracteres, uno de mas de 15 y uno con acento o enie
-    //         (rechazos).
-    // Paso 4: intentar registrar un equipo mas (rechazo por lista llena).
-    // Paso 5: simular en modo de prueba.
-    // Paso 6: intentar simular de nuevo (rechazo).
-    // Paso 7: mostrar equipos, resultados, tabla y matriz.
-    // Paso 8: mostrar al campeon y elegirlo entre los empatados.
-    // Paso 9: consultar un equipo existente y uno inexistente (rechazo).
-    // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
-    // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
-    //          resultados, tabla y campeon.
-}
-}
     return 0;
-
 }
