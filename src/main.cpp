@@ -11,13 +11,14 @@
 // Lean PROYECTO.md antes de escribir codigo.
 
 #include <iostream>
-
+#include <string>
 #include "utilerias.h"
 #include "torneo.h"
 
+
 void mostrarMenu()
      {
-    std::cout << "1.-Registrar equipo\n";
+    std::cout << "1.-Registrar equipos\n";
     std::cout << "2.-Mostrar equipos\n";
     std::cout << "3.-Simular torneo\n";
     std::cout << "4.-Mostrar resultados\n";
@@ -30,20 +31,31 @@ void mostrarMenu()
 // TODO: incluyan aqui el archivo .h de cada modulo.
 
 int main() {
-int opcion ;
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
 std::cout<< "TORNEO DE FUTBOL" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
-mostrarMenu();
 while (true){
+    mostrarMenu();
+
         int opcion = leerEntero("Selecciona una opcion:"); 
         std::cout << "Valor leido: " << opcion << std::endl;
         if(opcion < 0 || opcion > 9) {
-    std::cout << "Numero no valido\n";
-        }
+    std::cout << "Numero no valido\n"; 
+}
+  switch(opcion){
+            case 1:
+       {
+  std::cout << "\nRegistrar equipos\n";
+   for (int i = 0; i < 6; i++)
+    {
+  std::cout << "Nombre del equipo " << i + 1 << ": ";
+  std::getline(std::cin, r[i].nombre);
     }
+}
+            break;
+    
 
     // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
     //
@@ -62,6 +74,8 @@ while (true){
     // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
     // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
     //          resultados, tabla y campeon.
-
+}
+}
     return 0;
+
 }

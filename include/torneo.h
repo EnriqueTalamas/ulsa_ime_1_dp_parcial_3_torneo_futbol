@@ -12,6 +12,8 @@
 // =====================================================
 
 #include <string>
+#include <string>
+
 
 // ---------- Constantes compartidas ----------
 // Una constante no es una variable global: su valor nunca cambia.
@@ -37,5 +39,9 @@ const int PUNTOS_DERROTA = 0;
 // ---------- Registros (equipo) ----------
 // Escriban aqui los struct del torneo.
 
+struct Registro_equipos {
+    std::string nombre; 
+};
+Registro_equipos r[6];
 // ---------- Funciones comunes (equipo) ----------
 // Escriban aqui las funciones que varios modulos comparten.
